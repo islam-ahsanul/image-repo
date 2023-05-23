@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProgressBar from './ProgressBar';
+import { motion } from 'framer-motion';
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
@@ -19,10 +20,10 @@ const UploadForm = () => {
   };
   return (
     <form>
-      <label>
+      <motion.label whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }}>
         <input type="file" onChange={changeHandler} />
         <span>+</span>
-      </label>
+      </motion.label>
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <div>{file.name}</div>}

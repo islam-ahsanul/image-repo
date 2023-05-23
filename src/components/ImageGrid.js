@@ -25,7 +25,7 @@ export const ImageGrid = ({ setSelectedImg }) => {
                   setSelectedImg(doc.url);
                   //   console.log(doc.url);
                 }}
-                whileHover={{ opacity: 1 }}
+                whileHover={{ opacity: 1, scale: 1.1 }}
                 layout
               >
                 <motion.img
