@@ -1,9 +1,9 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
 
-export const ImageGrid = () => {
+export const ImageGrid = ({ setSelectedImg }) => {
   const { docs } = useFirestore('images');
-  console.log(docs);
+  //   console.log(docs);
 
   return (
     <div className="img-grid">
@@ -17,7 +17,14 @@ export const ImageGrid = () => {
         docs.map(function (doc, index) {
           if (index % 2 === 0) {
             return (
-              <div className="img-wrap" key={doc.id}>
+              <div
+                className="img-wrap"
+                key={doc.id}
+                onClick={() => {
+                  setSelectedImg(doc.url);
+                  //   console.log(doc.url);
+                }}
+              >
                 <img src={doc.url} alt="Failed to load" />
               </div>
             );
