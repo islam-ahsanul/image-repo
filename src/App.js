@@ -21,4 +21,5 @@ function App() {
 
 export default App;
 
+// This following project was developed based on a tutorial on YouTube by Shaun from Net Ninja.
 //https://www.youtube.com/watch?v=vUe91uOx7R0&list=PLillGF-RfqbY3c2r0htQyVbDJJoBFE6Rb&index=27
